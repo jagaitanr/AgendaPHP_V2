@@ -11,7 +11,7 @@ class ConectorDB
   function initConexion($nombre_db){
     $this->conexion = new mysqli($this->host, $this->user, $this->password, $nombre_db);
     if ($this->conexion->connect_error) {
-      return "Error: ".$this->conexion->connect_error;
+      return "Error_  : ".$this->conexion->connect_error;
     echo "error";
     }
     else{

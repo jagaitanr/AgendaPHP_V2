@@ -29,7 +29,14 @@ class Login {
       type: 'POST',
       success: function(php_response){
         if (php_response.conexion == "OK") {
+          if (php_response.acceso =='concedido')
+          {
           window.location.href = 'main.html';
+          }
+          else {
+            alert('usuario y contraseña invalido, revise datos');
+          }
+
         }else {
           alert(php_response.conexion);
         }
